@@ -1,8 +1,4 @@
-CREATE TABLE persons (
-  id SERIAL,
-  first_name VARCHAR(50),
-  last_name VARCHAR(50),
-  dob DATE,
-  email VARCHAR(255),
-  PRIMARY KEY (id)
-)
+COPY persons(name, population)
+FROM 'C:\sampledb\city.csv'
+DELIMITER ','
+CSV HEADER;
